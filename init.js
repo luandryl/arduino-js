@@ -9,17 +9,11 @@ const board = new five.Board({ timeout: 3600 });
 
 
 board.on("ready", function() {
- 
-  const buf1 = Buffer.from('true');
-  
-  //while(true){
-      
-    loop()
-  //}
+
+  loop()
       
 });
 var loop = function(){
-   
    
    setTimeout(function(){
      buf = onoff(url)
@@ -39,11 +33,9 @@ var loop = function(){
       loop()
  }, 10);
 }
+
 var onoff = function (url) {
-    console.log("oiii")
- 
     var res = request('GET', url)
-    console.log(res.getBody());
     return res.getBody()
 } 
 
